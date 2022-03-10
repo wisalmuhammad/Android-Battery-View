@@ -38,7 +38,7 @@ allprojects {
 
 
 
-# ScreenShot
+# ScreenShots
 ------------
 
 ![Battery Charging](https://i.imgur.com/6TBYCGc.jpg)
