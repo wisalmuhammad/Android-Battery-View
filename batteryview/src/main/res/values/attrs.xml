@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BatteryView">
+        <attr name="outer_border_color" format="color"/>
+        <attr name="outer_border_stroke_width" format="dimension"/>
+        <attr name="battery_level" format="integer" />
+        <attr name="warning_level" format="integer" />
+        <attr name="charging" format="boolean"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.wisal.android.views.batteryview.BatteryView
+        android:id="@+id/battery_view"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:battery_level="40"
+        app:charging="false"
+        app:outer_border_stroke_width="2dp"
+        app:warning_level="15"
+        app:outer_border_color="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:min="0"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/radio_group"
+        app:layout_constraintEnd_toEndOf="@+id/battery_view"
+        app:layout_constraintStart_toStartOf="@+id/battery_view"
+        app:layout_constraintTop_toBottomOf="@+id/battery_view" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/seek_bar"
+        app:layout_constraintStart_toStartOf="@+id/seek_bar"
+        app:layout_constraintTop_toBottomOf="@+id/seek_bar">
+
+        <RadioButton
+            android:id="@+id/charging"
+            android:checked="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Charging" />
+
+        <RadioButton
+            android:id="@+id/no_charging"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="No charging" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
