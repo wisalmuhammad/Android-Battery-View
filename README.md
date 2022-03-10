@@ -21,6 +21,23 @@ This simple also demonstrates and helps how to draw custom view.
 
 ```
 
+You can add this lib in your project as simple as add this line to your build.gradle file.
+
+```
+   implementation 'com.github.wisalmuhammad:Android-Battery-View:1.0.0
+
+```
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+
+
 # ScreenShot
 ------------
 
